@@ -84,7 +84,7 @@ export default function Navbar() {
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
         >
-          <span /><span /><span />
+          <img src="/bird in hand ring logo.png" alt="Menu" className={styles.hamburgerLogo} />
         </button>
 
         {/* Nav links */}
