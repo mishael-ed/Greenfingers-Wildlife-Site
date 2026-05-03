@@ -16,12 +16,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        {/* Col 2 — Description */}
-        <div className={styles.desc}>
-          <p>We are a Non-Governmental Organization focused on Wildlife and Environmental Conservation.</p>
-        </div>
-
-        {/* Col 3 — Visit Us */}
+        {/* Col 2 — Visit Us */}}
         <div className={styles.visit}>
           <h4 className={styles.colHeading}>Visit Us</h4>
           <div className={styles.contactItem}>
@@ -38,7 +33,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Col 4 — Newsletter */}
+        {/* Col 3 — Newsletter */}}
         <div className={styles.newsletter}>
           <h4 className={styles.colHeading}>Join The club</h4>
           <p className={styles.newsletterDesc}>Get updates on special events and programs</p>

@@ -3,7 +3,7 @@
   background: var(--white);
 }
 .heading {
-  font-family: 'Cedarville Cursive', cursive;
+  font-family: 'Freckle Face', cursive;
   font-weight: 700;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   color: var(--orange);
