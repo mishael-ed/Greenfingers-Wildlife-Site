@@ -13,10 +13,6 @@ export default function Footer() {
         <div className={styles.brand}>
           <Link to="/" className={styles.logoLink}>
             <img src="/logo.png" alt="Green Fingers" className={styles.logoImg} />
-            <div className={styles.logoText}>
-              <span className={styles.logoMain}>Green Fingers</span>
-              <span className={styles.logoSub}>Wildlife Conservation Initiative</span>
-            </div>
           </Link>
         </div>
 
