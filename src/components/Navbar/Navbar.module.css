@@ -1,0 +1,233 @@
+/* -- Navbar: centered logo above, cursive links below -- */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  padding: 24px 0 0;
+}
+.navbar.scrolled {
+  background: rgba(0, 0, 0, 0.96);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.60);
+  backdrop-filter: blur(12px);
+  padding: 8px 0 0;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+/* -- Logo (centered top) -- */
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  overflow: hidden;
+  max-height: 80px;
+  opacity: 1;
+  transition: max-height 0.35s ease, opacity 0.25s ease, margin 0.35s ease;
+  margin-bottom: 4px;
+}
+.logoImg {
+  height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* Hide logo when scrolled */
+.scrolled .logo {
+  max-height: 0;
+  opacity: 0;
+  margin-bottom: 0;
+  pointer-events: none;
+}
+
+/* -- Nav links row (below logo) -- */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  padding-bottom: 10px;
+}
+
+.navLink {
+  display: block;
+  padding: 6px 22px;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--white);
+  border-radius: var(--radius-sm);
+  transition: color var(--transition);
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+.navLink:hover { color: var(--orange); }
+.navLink.active { color: var(--orange); }
+
+/* -- Dropdown -- */
+.dropdown { position: relative; }
+
+.dropBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 22px;
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 1.75rem;
+  font-weight: 400;
+  color: var(--white);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition);
+  letter-spacing: 0.01em;
+  text-shadow: none;
+}
+.dropBtn:hover { color: var(--orange); }
+
+.arrow {
+  font-size: 0.65rem;
+  transition: transform var(--transition);
+  display: inline-block;
+  font-family: var(--font-body);
+}
+.dropOpen .arrow { transform: rotate(180deg); }
+
+.dropMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  background: rgba(10,20,10,0.95);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(76,175,80,0.2);
+  border-radius: var(--radius-md);
+  min-width: 185px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all var(--transition);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  list-style: none;
+}
+.dropOpen .dropMenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transform: translateX(-50%) translateY(0);
+}
+.dropMenu li a {
+  display: block;
+  padding: 11px 20px;
+  color: var(--white);
+  font-family: 'Cedarville Cursive', cursive;
+  font-size: 1rem;
+  transition: background var(--transition), padding-left var(--transition);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.dropMenu li:last-child a { border-bottom: none; }
+.dropMenu li a:hover {
+  background: var(--green-main);
+  padding-left: 28px;
+}
+
+/* Donate — plain text like other nav links */
+
+/* -- Hamburger -- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+  z-index: 1100;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 16px;
+  right: 20px;
+}
+.hamburger span {
+  display: block;
+  width: 26px;
+  height: 2.5px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+/* -- Responsive -- */
+@media (max-width: 768px) {
+  .hamburger { display: flex; }
+  .navbar { padding: 12px 0 0; }
+
+  .container { flex-direction: row; justify-content: flex-start; align-items: center; height: 64px; padding: 0 20px; gap: 0; }
+
+  .navLinks {
+    position: fixed;
+    top: 0; right: 0;
+    width: 280px;
+    height: 100vh;
+    background: rgba(10,20,10,0.98);
+    backdrop-filter: blur(16px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 90px 28px 40px;
+    gap: 4px;
+    transform: translateX(100%);
+    transition: transform var(--transition);
+    border-left: 1px solid rgba(76,175,80,0.2);
+    z-index: 1000;
+    overflow-y: auto;
+    padding-bottom: 0;
+  }
+  .navLinks.navOpen { transform: translateX(0); }
+
+  .navLink,
+  .dropBtn {
+    font-size: 1.2rem;
+    padding: 12px 8px;
+    width: 100%;
+  }
+
+  .dropMenu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: hidden;
+    pointer-events: none;
+    max-height: 0;
+    overflow: hidden;
+    background: rgba(255,255,255,0.04);
+    border-radius: var(--radius-sm);
+    box-shadow: none;
+    border: 1px solid rgba(76,175,80,0.1);
+    transition: max-height 0.35s ease, visibility 0s 0.35s;
+  }
+  .dropOpen .dropMenu {
+    visibility: visible;
+    pointer-events: all;
+    max-height: 300px;
+    transition: max-height 0.35s ease;
+  }
+  .dropMenu li a { padding: 10px 24px; }
+
+  .navLinks li:last-child { width: 100%; margin-top: 8px; }
+  .donateCursive { width: 100%; text-align: center; display: block; }
+}

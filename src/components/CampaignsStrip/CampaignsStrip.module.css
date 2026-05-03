@@ -1,0 +1,18 @@
+﻿.strip {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: var(--green-light);
+  padding: 20px 60px;
+}
+.logo {
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.logo:hover { opacity: 1; }
+.img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}

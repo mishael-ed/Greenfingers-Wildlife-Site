@@ -1,0 +1,91 @@
+﻿.section {
+  padding: 80px 0;
+  background: var(--white);
+}
+.heading {
+  font-family: 'Cedarville Cursive', cursive;
+  font-weight: 700;
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  color: var(--orange);
+  margin-bottom: 32px;
+  line-height: 1.2;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  min-height: 340px;
+}
+.card {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 340px;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(120, 55, 0, 0.82);
+}
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  justify-content: space-between;
+}
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cardTitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+.cardDesc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  border-radius: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.btn::after {
+  content: '\2192';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  font-size: 0.8em;
+  transition: border-color 0.25s ease;
+}
+.btn:hover { background: #fff; border-color: #fff; color: #000; }
+.btn:hover::after { border-color: #000; }
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}

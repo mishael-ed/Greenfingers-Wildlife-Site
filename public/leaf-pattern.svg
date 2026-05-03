@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="320" viewBox="0 0 320 320">
+  <!-- Leaf 1: medium, left-centre, tilted -->
+  <g transform="translate(58,90) rotate(-22)">
+    <path d="M0 75 C-32 42 -32 0 0 0 C32 0 32 42 0 75Z"
+          fill="none" stroke="#4caf50" stroke-width="1.2" opacity="0.16"/>
+    <line x1="0" y1="2" x2="0" y2="73" stroke="#4caf50" stroke-width="0.7" opacity="0.16"/>
+    <line x1="0" y1="28" x2="-16" y2="42" stroke="#4caf50" stroke-width="0.5" opacity="0.16"/>
+    <line x1="0" y1="48" x2="14" y2="59" stroke="#4caf50" stroke-width="0.5" opacity="0.16"/>
+  </g>
+
+  <!-- Leaf 2: small, top-right, tilted other way -->
+  <g transform="translate(228,18) rotate(18)">
+    <path d="M0 50 C-22 28 -22 0 0 0 C22 0 22 28 0 50Z"
+          fill="none" stroke="#4caf50" stroke-width="1" opacity="0.13"/>
+    <line x1="0" y1="2" x2="0" y2="48" stroke="#4caf50" stroke-width="0.6" opacity="0.13"/>
+    <line x1="0" y1="20" x2="-11" y2="30" stroke="#4caf50" stroke-width="0.4" opacity="0.13"/>
+  </g>
+
+  <!-- Leaf 3: large, bottom-right -->
+  <g transform="translate(198,185) rotate(-8)">
+    <path d="M0 96 C-42 54 -42 0 0 0 C42 0 42 54 0 96Z"
+          fill="none" stroke="#4caf50" stroke-width="1.4" opacity="0.14"/>
+    <line x1="0" y1="2" x2="0" y2="94" stroke="#4caf50" stroke-width="0.8" opacity="0.14"/>
+    <line x1="0" y1="30" x2="-22" y2="46" stroke="#4caf50" stroke-width="0.5" opacity="0.14"/>
+    <line x1="0" y1="52" x2="20" y2="65" stroke="#4caf50" stroke-width="0.5" opacity="0.14"/>
+    <line x1="0" y1="70" x2="-16" y2="80" stroke="#4caf50" stroke-width="0.4" opacity="0.14"/>
+  </g>
+
+  <!-- Leaf 4: tiny, bottom-left -->
+  <g transform="translate(18,238) rotate(28)">
+    <path d="M0 38 C-16 22 -16 0 0 0 C16 0 16 22 0 38Z"
+          fill="none" stroke="#4caf50" stroke-width="0.9" opacity="0.12"/>
+    <line x1="0" y1="2" x2="0" y2="36" stroke="#4caf50" stroke-width="0.5" opacity="0.12"/>
+  </g>
+
+  <!-- Leaf 5: medium, top-left corner bleed -->
+  <g transform="translate(-10,10) rotate(10)">
+    <path d="M0 60 C-26 34 -26 0 0 0 C26 0 26 34 0 60Z"
+          fill="none" stroke="#4caf50" stroke-width="1" opacity="0.11"/>
+    <line x1="0" y1="2" x2="0" y2="58" stroke="#4caf50" stroke-width="0.6" opacity="0.11"/>
+  </g>
+
+  <!-- Leaf 6: tiny scattered, centre -->
+  <g transform="translate(138,130) rotate(-35)">
+    <path d="M0 30 C-13 17 -13 0 0 0 C13 0 13 17 0 30Z"
+          fill="none" stroke="#4caf50" stroke-width="0.8" opacity="0.10"/>
+    <line x1="0" y1="1" x2="0" y2="29" stroke="#4caf50" stroke-width="0.5" opacity="0.10"/>
+  </g>
+</svg>
