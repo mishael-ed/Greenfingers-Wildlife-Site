@@ -62,7 +62,7 @@
 .navLink {
   display: block;
   padding: 6px 22px;
-  font-family: 'Freckle Face', cursive;
+  font-family: 'Luckiest Guy', cursive;
   font-size: 1.75rem;
   font-weight: 400;
   color: var(--white);
@@ -83,7 +83,7 @@
   align-items: center;
   gap: 4px;
   padding: 6px 22px;
-  font-family: 'Freckle Face', cursive;
+  font-family: 'Luckiest Guy', cursive;
   font-size: 1.75rem;
   font-weight: 400;
   color: var(--white);
@@ -133,7 +133,7 @@
   display: block;
   padding: 11px 20px;
   color: var(--white);
-  font-family: 'Freckle Face', cursive;
+  font-family: 'Luckiest Guy', cursive;
   font-size: 1rem;
   transition: background var(--transition), padding-left var(--transition);
 }

@@ -9,7 +9,7 @@
   align-items: start;
 }
 .heading {
-  font-family: 'Freckle Face', cursive;
+  font-family: 'Luckiest Guy', cursive;
   font-weight: 700;
   font-size: clamp(2rem, 4.5vw, 3.4rem);
   color: var(--orange);
