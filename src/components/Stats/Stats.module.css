@@ -39,5 +39,8 @@
   letter-spacing: 0.08em;
 }
 @media (max-width: 768px) {
-  .item { padding: 16px 28px; }
+  .inner { flex-wrap: wrap; justify-content: center; }
+  .item { padding: 12px 20px; }
+  .cell { flex: 0 0 50%; justify-content: center; }
+  .number { font-size: 1.6rem; }
 }

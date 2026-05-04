@@ -48,5 +48,6 @@
   object-fit: cover;
 }
 @media (max-width: 900px) {
-  .grid { grid-template-columns: 1fr; }
+  .grid { grid-template-columns: 1fr; gap: 40px; }
+  .section { padding: 64px 0; }
 }

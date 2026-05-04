@@ -92,7 +92,8 @@
 .btn:hover::after { border-color: #000; }
 
 @media (max-width: 800px) {
-  .textCol { width: 70%; padding: 40px 28px; }
+  .textCol { width: 65%; padding: 36px 24px; }
+  .heading { font-size: clamp(1.6rem, 6vw, 2.4rem); }
   .overlay {
     background: linear-gradient(
       to right,
@@ -105,5 +106,6 @@
 
 @media (max-width: 520px) {
   .textCol { width: 100%; padding: 40px 24px; }
-  .overlay { background: rgba(0,0,0,0.65); }
+  .overlay { background: rgba(0,0,0,0.72); }
+  .banner { min-height: 420px; }
 }

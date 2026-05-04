@@ -142,6 +142,15 @@
 .prev { left: 40px; }
 .next { right: 40px; }
 
+@media (max-width: 480px) {
+  .arrow { font-size: 1.5rem; padding: 0 8px; }
+  .prev { left: 8px; }
+  .next { right: 8px; }
+  .content { padding: 0 48px; }
+  .ctaBottom { bottom: 48px; padding: 0 24px; }
+  .heading { letter-spacing: 0.2em; }
+}
+
 /* ── Dots ── */
 .dots {
   position: absolute;

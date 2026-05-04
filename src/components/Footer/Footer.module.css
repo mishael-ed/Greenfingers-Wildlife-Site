@@ -1,4 +1,4 @@
-.footer { background: #0d0d0d; color: var(--white); }
+.footer { background: #000; color: var(--white); }
 
 .grid {
   display: grid;
