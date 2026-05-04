@@ -86,8 +86,8 @@ export default function Navbar() {
         >
           <svg width="30" height="22" viewBox="0 0 30 22" fill="none" aria-hidden="true" className={styles.hamburgerIcon}>
             <path d="M1 4 C5 1.5 9 6.5 13 4 C17 1.5 21 6.5 25 4 C27 3 29 3 29.5 4" stroke="#e6a817" strokeWidth="2.4" strokeLinecap="round"/>
-            <line x1="1" y1="11" x2="29" y2="11" stroke="white" strokeWidth="2.4" strokeLinecap="round"/>
-            <path d="M1 18 C5 15.5 9 20.5 13 18 C17 15.5 21 20.5 25 18 C27 17 29 17 29.5 18" stroke="#4caf50" strokeWidth="2.4" strokeLinecap="round"/>
+            <line x1="1" y1="11" x2="29" y2="11" stroke="#e6a817" strokeWidth="2.4" strokeLinecap="round"/>
+            <path d="M1 18 C5 15.5 9 20.5 13 18 C17 15.5 21 20.5 25 18 C27 17 29 17 29.5 18" stroke="#e6a817" strokeWidth="2.4" strokeLinecap="round"/>
           </svg>
         </button>
 
