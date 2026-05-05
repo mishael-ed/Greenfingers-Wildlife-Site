@@ -67,12 +67,12 @@
   font-weight: 400;
   color: var(--white);
   border-radius: var(--radius-sm);
-  transition: color var(--transition);
+  transition: color var(--transition), transform var(--transition);
   white-space: nowrap;
   letter-spacing: 0.01em;
   text-shadow: none;
 }
-.navLink:hover { color: var(--orange); }
+.navLink:hover { transform: translateY(-3px); }
 .navLink.active { color: var(--orange); }
 
 /* -- Dropdown -- */
@@ -91,11 +91,11 @@
   border: none;
   cursor: pointer;
   white-space: nowrap;
-  transition: color var(--transition);
+  transition: color var(--transition), transform var(--transition);
   letter-spacing: 0.01em;
   text-shadow: none;
 }
-.dropBtn:hover { color: var(--orange); }
+.dropBtn:hover { transform: translateY(-3px); }
 
 .arrow {
   font-size: 0.65rem;
@@ -105,9 +105,18 @@
 }
 .dropOpen .arrow { transform: rotate(180deg); }
 
+.dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 12px;
+}
+
 .dropMenu {
   position: absolute;
-  top: calc(100% + 6px);
+  top: calc(100% + 12px);
   left: 50%;
   transform: translateX(-50%) translateY(-8px);
   background: #000;
@@ -135,12 +144,11 @@
   color: var(--white);
   font-family: 'Luckiest Guy', cursive;
   font-size: 1rem;
-  transition: background var(--transition), padding-left var(--transition);
+  transition: background var(--transition);
 }
 .dropMenu li:last-child a { border-bottom: none; }
 .dropMenu li a:hover {
   background: var(--orange);
-  padding-left: 28px;
 }
 
 /* Donate — plain text like other nav links */

@@ -13,18 +13,21 @@ const NAV_ITEMS = [
   {
     label: 'About Us',
     children: [
-      { label: 'Who We Are', to: '/about' },
-      { label: 'Our Mission', to: '/about#mission' },
-      { label: 'Our Team', to: '/about#team' },
+      { label: 'Background', to: '/about#background' },
+      { label: 'Greenfingers Sanctuary', to: '/about#greenfingers-sanctuary' },
+      { label: 'Green Fingers Day', to: '/about#green-fingers-day' },
+      { label: 'Trashion', to: '/about#trashion' },
+      { label: 'Chinedu Mogbo', to: '/about#chinedu-mogbo' },
     ],
   },
   {
     label: 'Our Initiatives',
     children: [
-      { label: 'All Initiatives', to: '/initiatives' },
-      { label: '#Artivism', to: '/initiatives#artivism' },
-      { label: 'Education', to: '/initiatives#education' },
-      { label: 'Conservation', to: '/initiatives#conservation' },
+      { label: 'Events and News', to: '/initiatives#events-and-news' },
+      { label: 'Wildlife Warriors', to: '/initiatives#wildlife-warriors' },
+      { label: 'Comics', to: '/initiatives#comics' },
+      { label: 'Change Makers', to: '/initiatives#change-makers' },
+      { label: 'Ocean Heroes', to: '/initiatives#ocean-heroes' },
     ],
   },
   { label: 'Contact', to: '/contact' },
@@ -35,6 +38,15 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen]   = useState(false)
   const [openDrop, setOpenDrop]   = useState(null)
   const navRef                    = useRef(null)
+  const closeTimer                = useRef(null)
+
+  const openDropDelayed  = (label) => {
+    clearTimeout(closeTimer.current)
+    setOpenDrop(label)
+  }
+  const closeDropDelayed = () => {
+    closeTimer.current = setTimeout(() => setOpenDrop(null), 200)
+  }
 
   /* Scroll detection */
   useEffect(() => {
@@ -104,8 +116,8 @@ export default function Navbar() {
                   onClick={() => {
                     if (isMobile()) toggleDrop(item.label)
                   }}
-                  onMouseEnter={() => !isMobile() && setOpenDrop(item.label)}
-                  onMouseLeave={() => !isMobile() && setOpenDrop(null)}
+                  onMouseEnter={() => !isMobile() && openDropDelayed(item.label)}
+                  onMouseLeave={() => !isMobile() && closeDropDelayed()}
                   aria-haspopup="true"
                   aria-expanded={openDrop === item.label}
                 >
@@ -113,8 +125,8 @@ export default function Navbar() {
                 </button>
                 <ul
                   className={styles.dropMenu}
-                  onMouseEnter={() => !isMobile() && setOpenDrop(item.label)}
-                  onMouseLeave={() => !isMobile() && setOpenDrop(null)}
+                  onMouseEnter={() => !isMobile() && openDropDelayed(item.label)}
+                  onMouseLeave={() => !isMobile() && closeDropDelayed()}
                 >
                   {item.children.map((child) => (
                     <li key={child.label}>
