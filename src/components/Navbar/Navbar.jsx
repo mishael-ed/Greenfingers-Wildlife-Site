@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { NavLink, Link } from 'react-router-dom'
+import { NavLink, Link, useLocation } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
 const Logo = () => (
@@ -15,7 +15,7 @@ const NAV_ITEMS = [
     children: [
       { label: 'Background', to: '/about#background' },
       { label: 'Greenfingers Sanctuary', to: '/about#greenfingers-sanctuary' },
-      { label: 'Green Fingers Day', to: '/about#green-fingers-day' },
+      { label: 'Greenfingers Day', to: '/about#green-fingers-day' },
       { label: 'Trashion', to: '/about#trashion' },
       { label: 'Chinedu Mogbo', to: '/about#chinedu-mogbo' },
     ],
@@ -79,6 +79,10 @@ export default function Navbar() {
 
   const isMobile = () => window.innerWidth <= 768
 
+  const location = useLocation()
+  const isParentActive = (item) =>
+    item.children?.some((child) => location.pathname === child.to.split('#')[0])
+
   return (
     <nav
       ref={navRef}
@@ -112,7 +116,7 @@ export default function Navbar() {
                 className={`${styles.dropdown} ${openDrop === item.label ? styles.dropOpen : ''}`}
               >
                 <button
-                  className={styles.dropBtn}
+                  className={`${styles.dropBtn} ${isParentActive(item) ? styles.active : ''}`}
                   onClick={() => {
                     if (isMobile()) toggleDrop(item.label)
                   }}
