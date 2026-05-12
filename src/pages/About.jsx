@@ -81,11 +81,6 @@ export default function About() {
         <div className="container">
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionHeading}>Greenfingers Sanctuary</h2>
-            <p className={styles.sectionIntro}>
-              Our wildlife sanctuary is a safe haven for rescued animals and a hub for
-              environmental education. Visitors, volunteers, and partners come together here
-              to experience nature up close and support conservation first-hand.
-            </p>
           </div>
           <div className={styles.tiltGallery}>
             {SANCTUARY_PHOTOS.map((p) => (

@@ -14,8 +14,8 @@ const NAV_ITEMS = [
     label: 'About Us',
     children: [
       { label: 'Background', to: '/about#background' },
-      { label: 'Greenfingers Sanctuary', to: '/about#greenfingers-sanctuary' },
-      { label: 'Greenfingers Day', to: '/about#green-fingers-day' },
+          { label: 'Greenfingers Sanctuary', to: '/sanctuary' },
+      { label: 'Greenfingers Day', to: '/greenfingers-day' },
       { label: 'Trashion', to: '/about#trashion' },
       { label: 'Chinedu Mogbo', to: '/about#chinedu-mogbo' },
     ],

@@ -1,0 +1,95 @@
+/* ── Hero ── */
+.hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: url('https://images.unsplash.com/photo-1504173010664-32509107de5f?w=1600&q=80') center / cover no-repeat;
+}
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.2) 100%);
+}
+.heroContent {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 56px 80px;
+}
+.heroHeading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  color: var(--orange);
+  line-height: 1.1;
+  margin: 0;
+}
+
+/* ── Early Days ── */
+.earlyDays {
+  padding: 220px 0 60px;
+  background: var(--white);
+}
+.sectionHeading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  color: var(--green-main);
+  margin-bottom: 36px;
+  line-height: 1.2;
+}
+.textBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 100%;
+}
+.textBlock p {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.9;
+}
+
+/* ── Gallery ── */
+.gallerySection {
+  padding: 60px 0 100px;
+  background: #000;
+}
+.tiltGallery {
+  display: flex;
+  gap: 40px;
+  align-items: flex-end;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tiltCard {
+  background: #1a1a1a;
+  padding: 10px 10px 40px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.6);
+  max-width: 300px;
+  width: 100%;
+  flex-shrink: 0;
+}
+.tiltCard:nth-child(1) { transform: rotate(-2.5deg); }
+.tiltCard:nth-child(2) { transform: rotate(1.5deg) translateY(-16px); }
+.tiltCard:nth-child(3) { transform: rotate(-1deg); }
+.tiltCard img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+.tiltCaption {
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.65);
+  margin-top: 10px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .heroContent { padding: 0 0 40px 24px; }
+  .tiltCard { max-width: 260px; }
+  .tiltCard:nth-child(1),
+  .tiltCard:nth-child(2),
+  .tiltCard:nth-child(3) { transform: none; }
+}

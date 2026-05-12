@@ -197,7 +197,7 @@
     top: 0; right: 0;
     width: 280px;
     height: 100vh;
-    background: rgba(10,20,10,0.98);
+    background: #000;
     backdrop-filter: blur(16px);
     flex-direction: column;
     align-items: flex-start;
@@ -208,7 +208,8 @@
     border-left: 1px solid rgba(76,175,80,0.2);
     z-index: 1000;
     overflow-y: auto;
-    padding-bottom: 0;
+    overflow-x: hidden;
+    padding-bottom: 40px;
   }
   .navLinks.navOpen { transform: translateX(0); }
 
@@ -219,9 +220,17 @@
     width: 100%;
   }
 
+  .dropdown {
+    width: 100%;
+  }
+
   .dropMenu {
-    position: static;
-    transform: none;
+    position: static !important;
+    transform: none !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100%;
     opacity: 1;
     visibility: hidden;
     pointer-events: none;
@@ -236,10 +245,10 @@
   .dropOpen .dropMenu {
     visibility: visible;
     pointer-events: all;
-    max-height: 300px;
+    max-height: 400px;
     transition: max-height 0.35s ease;
   }
-  .dropMenu li a { padding: 10px 24px; }
+  .dropMenu li a { padding: 10px 20px; }
 
   .navLinks li:last-child { width: 100%; margin-top: 8px; }
   .donateCursive { width: 100%; text-align: center; display: block; }
