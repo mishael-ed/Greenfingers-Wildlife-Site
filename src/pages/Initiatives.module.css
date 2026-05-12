@@ -1,0 +1,145 @@
+/* ── Wildlife Warriors Hero ── */
+.wwHero {
+  position: relative;
+  height: 70vh;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  background: url('https://images.unsplash.com/photo-1544568100-847a948585b9?w=1600&q=80') center / cover no-repeat;
+}
+.wwHeroOverlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.72) 0%,
+      rgba(0,0,0,0.52) 50%,
+      rgba(0,0,0,0.30) 100%
+    ),
+    rgba(0,0,0,0.35);
+}
+.wwHeroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding: 100px 24px 0;
+}
+.wwHeroTitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.7rem);
+  font-weight: 700;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+.wwHeroSubtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.8;
+  max-width: 520px;
+  margin: 0 auto;
+  letter-spacing: 0.04em;
+}
+
+/* ── Cards Grid ── */
+.wwCards {
+  padding: 80px 0 100px;
+  background: var(--white);
+}
+.wwGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  min-height: 340px;
+}
+.wwCard {
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 340px;
+}
+.wwCardOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 60, 20, 0.80);
+}
+.wwCardContent {
+  position: relative;
+  z-index: 2;
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  flex: 1;
+  justify-content: space-between;
+}
+.wwCardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wwCardTitle {
+  font-family: var(--font-body);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.2;
+}
+.wwCardDesc {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.7;
+}
+.wwReadMore {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--white);
+  border: 1.5px solid var(--white);
+  border-radius: 0;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+.wwReadMore::after {
+  content: '\2192';
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1.5px solid var(--white);
+  font-size: 0.8em;
+  transition: border-color 0.25s ease;
+}
+.wwReadMore:hover {
+  background: var(--green-main);
+  border-color: var(--green-main);
+}
+.wwReadMore:hover::after {
+  border-color: var(--white);
+}
+
+@media (max-width: 900px) {
+  .wwGrid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .wwHero { height: 55vh; }
+  .wwHeroContent { padding-top: 80px; }
+  .wwCards { padding: 56px 0 72px; }
+}

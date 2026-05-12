@@ -1,0 +1,48 @@
+/* ── Trashion Page ── */
+.trashionSection {
+  padding: 120px 0 100px;
+  background: #000;
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.trashionSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1600&q=80') center / cover no-repeat;
+  opacity: 0.35;
+}
+.trashionGrid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: center;
+  width: 100%;
+}
+.trashionText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.trashionText p {
+  font-size: 0.98rem;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.85;
+}
+.trashionHeading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  color: var(--orange);
+  line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+  .trashionGrid { grid-template-columns: 1fr; gap: 40px; }
+  .trashionSection { padding: 100px 0 64px; }
+}

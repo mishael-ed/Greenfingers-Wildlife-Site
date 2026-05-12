@@ -16,7 +16,7 @@ const NAV_ITEMS = [
       { label: 'Background', to: '/about#background' },
           { label: 'Greenfingers Sanctuary', to: '/sanctuary' },
       { label: 'Greenfingers Day', to: '/greenfingers-day' },
-      { label: 'Trashion', to: '/about#trashion' },
+      { label: 'Trashion', to: '/trashion' },
       { label: 'Chinedu Mogbo', to: '/about#chinedu-mogbo' },
     ],
   },
@@ -25,7 +25,7 @@ const NAV_ITEMS = [
     children: [
       { label: 'Events and News', to: '/initiatives#events-and-news' },
       { label: 'Wildlife Warriors', to: '/initiatives#wildlife-warriors' },
-      { label: 'Comics', to: '/initiatives#comics' },
+      { label: 'Comics', to: '/comics' },
       { label: 'Change Makers', to: '/initiatives#change-makers' },
       { label: 'Ocean Heroes', to: '/initiatives#ocean-heroes' },
     ],
