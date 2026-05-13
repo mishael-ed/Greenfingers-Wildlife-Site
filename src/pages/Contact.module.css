@@ -1,0 +1,136 @@
+/* ── Two-column layout ── */
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  padding-top: 64px; /* navbar height */
+}
+
+/* ── Left Panel ── */
+.left {
+  background: linear-gradient(160deg, #0a2e14 0%, #1a5c28 100%);
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+}
+.heading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  color: var(--white);
+  line-height: 1.1;
+  margin: 0;
+}
+.tagline {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.75;
+  margin: 0;
+}
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.blockHeading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 1.6rem;
+  color: var(--white);
+  margin: 0 0 8px;
+}
+.block p {
+  font-size: 0.92rem;
+  color: rgba(255, 255, 255, 0.80);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Right Panel ── */
+.right {
+  background: var(--white);
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+}
+.formHeading {
+  font-family: 'Luckiest Guy', cursive;
+  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  color: var(--green-main);
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #a8d44d;
+  border-radius: 2px;
+  font-size: 0.92rem;
+  color: var(--text-dark);
+  background: var(--white);
+  outline: none;
+  transition: border-color 0.2s ease;
+  font-family: var(--font-body);
+  box-sizing: border-box;
+}
+.input:focus {
+  border-color: var(--green-main);
+}
+.input::placeholder {
+  color: #aaa;
+}
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 36px;
+  cursor: pointer;
+}
+.textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+.submitRow {
+  display: flex;
+  justify-content: center;
+}
+.sendBtn {
+  padding: 13px 60px;
+  background: #a8d44d;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+.sendBtn:hover {
+  background: var(--green-main);
+  transform: translateY(-2px);
+}
+
+/* ── Responsive ── */
+@media (max-width: 860px) {
+  .page { grid-template-columns: 1fr; }
+  .left { padding: 60px 32px; }
+  .right { padding: 60px 32px; }
+  .row { grid-template-columns: 1fr; }
+}
