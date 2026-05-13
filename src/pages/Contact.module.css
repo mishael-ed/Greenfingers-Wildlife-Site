@@ -16,10 +16,13 @@
   justify-content: center;
 }
 .heading {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(1rem, 2.2vw, 1.7rem);
+  font-weight: 700;
   color: var(--white);
-  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
+  line-height: 1.15;
   margin: 0;
 }
 .tagline {
@@ -34,9 +37,12 @@
   gap: 6px;
 }
 .blockHeading {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.8rem, 1.4vw, 1rem);
+  font-weight: 700;
   color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
   margin: 0 0 8px;
 }
 .block p {
@@ -56,11 +62,14 @@
   gap: 32px;
 }
 .formHeading {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: clamp(1rem, 1.6vw, 1.3rem);
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+  font-weight: 700;
   color: var(--green-main);
+  text-transform: uppercase;
+  letter-spacing: 0.42em;
   text-align: center;
-  line-height: 1.5;
+  line-height: 1.8;
   margin: 0;
 }
 .form {
