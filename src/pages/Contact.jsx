@@ -15,30 +15,7 @@ export default function Contact() {
 
   return (
     <div className={styles.page}>
-      {/* ── Left Panel ── */}
-      <div className={styles.left}>
-        <h1 className={styles.heading}>Contact Us</h1>
-        <p className={styles.tagline}>
-          We would love to speak with you.<br />
-          Feel free to reach out using the details below.
-        </p>
-
-        <div className={styles.block}>
-          <h2 className={styles.blockHeading}>Get In Touch</h2>
-          <p>+2348033030397</p>
-          <p>+2348188743394</p>
-          <p>info@greenfingerswi.org</p>
-          <p>gfgardensng@gmail.com</p>
-        </div>
-
-        <div className={styles.block}>
-          <h2 className={styles.blockHeading}>Hours</h2>
-          <p>Mon–Sat 9:00AM – 6:00PM</p>
-          <p>Sat–Sun 12:00NOON – 6:00PM</p>
-        </div>
-      </div>
-
-      {/* ── Right Panel ── */}
+      {/* ── Form ── */}
       <div className={styles.right}>
         <p className={styles.formHeading}>
           Fill out the form below and we will<br />

@@ -1,9 +1,11 @@
-/* ── Two-column layout ── */
+/* ── Full-width form layout ── */
 .page {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   min-height: 100vh;
-  padding-top: 64px; /* navbar height */
+  padding-top: 250px;
+  background: var(--white);
 }
 
 /* ── Left Panel ── */
@@ -52,7 +54,7 @@
   margin: 0;
 }
 
-/* ── Right Panel ── */
+/* ── Form Panel ── */
 .right {
   background: var(--white);
   padding: 80px 60px;
@@ -60,12 +62,14 @@
   flex-direction: column;
   justify-content: center;
   gap: 32px;
+  width: 100%;
+  max-width: 780px;
 }
 .formHeading {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(0.8rem, 1.2vw, 1rem);
   font-weight: 700;
-  color: var(--green-main);
+  color: #1a1a1a;
   text-transform: uppercase;
   letter-spacing: 0.42em;
   text-align: center;
