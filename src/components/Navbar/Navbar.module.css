@@ -64,7 +64,7 @@
 .navLink {
   display: block;
   padding: 6px 22px;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: 1.75rem;
   font-weight: 400;
   color: var(--white);
@@ -85,7 +85,7 @@
   align-items: center;
   gap: 4px;
   padding: 6px 22px;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: 1.75rem;
   font-weight: 400;
   color: var(--white);
@@ -145,7 +145,7 @@
   display: block;
   padding: 11px 20px;
   color: var(--white);
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: 1rem;
   transition: background var(--transition);
 }

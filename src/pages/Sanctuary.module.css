@@ -18,7 +18,7 @@
   padding: 0 0 56px 80px;
 }
 .heroHeading {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(2.4rem, 5vw, 4rem);
   color: var(--orange);
   line-height: 1.1;
@@ -31,7 +31,7 @@
   background: var(--white);
 }
 .sectionHeading {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
   color: var(--green-main);
   margin-bottom: 36px;

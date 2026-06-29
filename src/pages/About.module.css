@@ -24,7 +24,7 @@
 .pageHeroTitle {
   position: relative;
   z-index: 1;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(3rem, 8vw, 6rem);
   color: var(--white);
   letter-spacing: 0.02em;
@@ -48,7 +48,7 @@
   margin-bottom: 12px;
 }
 .sectionHeading {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   color: var(--green-main);
   margin-bottom: 40px;
@@ -105,7 +105,7 @@
   text-align: center;
 }
 .quoteText {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(1rem, 2.5vw, 1.4rem);
   color: var(--white);
   letter-spacing: 0.04em;
@@ -126,7 +126,7 @@
   color: var(--orange);
 }
 .sanctuarySubheading {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(1.2rem, 2.5vw, 1.6rem);
   color: var(--green-main);
   margin-bottom: 20px;
@@ -237,7 +237,7 @@
   line-height: 1.85;
 }
 .trashionHeading {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(2rem, 4.5vw, 3.2rem);
   color: var(--orange);
   line-height: 1.2;
@@ -276,7 +276,7 @@
   gap: 18px;
 }
 .chineduHeading {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(2rem, 4.5vw, 3rem);
   color: var(--green-main);
   line-height: 1.2;
@@ -312,7 +312,7 @@
   text-align: center;
 }
 .mediaHeading {
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
   font-size: clamp(1.8rem, 4vw, 2.6rem);
   color: var(--green-main);
   margin-bottom: 12px;

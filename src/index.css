@@ -2,6 +2,14 @@
    GREEN FINGERS — Global Styles
 ═══════════════════════════════════════════════════ */
 
+@font-face {
+  font-family: 'Playfulist';
+  src: url('./fonts/playfulist/Playfulist.otf') format('opentype'),
+       url('./fonts/playfulist/Playfulist.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --green-dark:    #1a3a1a;
   --green-main:    #4caf50;
@@ -20,7 +28,7 @@
   --transition:    0.25s ease;
   --font-body:     'Inter', 'Rubik', sans-serif;
   --font-display:  'Montserrat', sans-serif;
-  --font-cursive:  'Luckiest Guy', cursive;
+  --font-cursive:  'Playfulist', cursive;
   --font-graffiti: 'Permanent Marker', cursive;
 }
 
@@ -64,7 +72,7 @@ button { font-family: inherit; }
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 24px;
-  font-family: 'Luckiest Guy', cursive;
+  font-family: 'Playfulist', cursive;
 }
 .section-intro {
   font-size: 1.05rem;
