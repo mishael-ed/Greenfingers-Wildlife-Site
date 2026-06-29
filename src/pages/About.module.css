@@ -336,11 +336,7 @@
   height: 80px;
   width: auto;
   object-fit: contain;
-  filter: grayscale(100%);
-  opacity: 0.6;
-  transition: filter var(--transition), opacity var(--transition), transform var(--transition);
 }
-.mediaLogo:hover { filter: grayscale(0%); opacity: 1; transform: translateY(-4px); }
 
 /* ── Responsive ── */
 @media (max-width: 900px) {

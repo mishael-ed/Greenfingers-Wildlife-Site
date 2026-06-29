@@ -6,8 +6,11 @@
   background: rgba(0, 0, 0, 0.96);
   box-shadow: 0 2px 20px rgba(0,0,0,0.60);
   backdrop-filter: blur(12px);
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.35s ease;
   padding: 24px 0 0;
+}
+.navbar.hidden {
+  transform: translateY(-100%);
 }
 .navbar.scrolled {
   background: rgba(0, 0, 0, 0.96);
@@ -189,6 +192,14 @@
 
   .logo { display: flex; }
   .logoImg { height: 36px; }
+
+  /* Don't hide just the logo on mobile — the whole navbar slides away instead */
+  .scrolled .logo {
+    max-height: 80px;
+    opacity: 1;
+    margin-bottom: 0;
+    pointer-events: auto;
+  }
 
   .hamburger { position: static; top: auto; right: auto; }
 

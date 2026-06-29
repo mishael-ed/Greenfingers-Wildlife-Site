@@ -35,10 +35,12 @@ const NAV_ITEMS = [
 
 export default function Navbar() {
   const [scrolled, setScrolled]   = useState(false)
+  const [hidden, setHidden]       = useState(false)
   const [menuOpen, setMenuOpen]   = useState(false)
   const [openDrop, setOpenDrop]   = useState(null)
   const navRef                    = useRef(null)
   const closeTimer                = useRef(null)
+  const lastScrollY               = useRef(0)
 
   const openDropDelayed  = (label) => {
     clearTimeout(closeTimer.current)
@@ -48,9 +50,18 @@ export default function Navbar() {
     closeTimer.current = setTimeout(() => setOpenDrop(null), 200)
   }
 
-  /* Scroll detection */
+  /* Scroll detection — hide on down, reveal on up */
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40)
+    const onScroll = () => {
+      const y = window.scrollY
+      setScrolled(y > 40)
+      if (y > lastScrollY.current && y > 80) {
+        setHidden(true)
+      } else {
+        setHidden(false)
+      }
+      lastScrollY.current = y
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
@@ -86,7 +97,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}
+      className={`${styles.navbar} ${scrolled ? styles.scrolled : ''} ${hidden ? styles.hidden : ''}`}
       role="navigation"
       aria-label="Main navigation"
     >
