@@ -34,7 +34,7 @@
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-p { text-align: justify; }
+p { text-align: left; }
 body {
   font-family: var(--font-body);
   color: var(--text-dark);
